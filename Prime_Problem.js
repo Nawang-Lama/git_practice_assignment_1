@@ -1,13 +1,19 @@
+//prime problem
+
 let num= 23;
+function checkprime(num){
 
-let count=0;
+let check=true;
 
-for (let i=1; i<num; i--){
+for (let i=2; i<num; i++){
   if (num%i==0){
-    count++;
+    check=false
   }
 }
-if (count==1){
+return check
+}
+
+if (checkprime(num)==true){
   console.log ("Yes");
 } else {
   console.log ("No");
